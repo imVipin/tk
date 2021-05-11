@@ -1,0 +1,16 @@
+version: "3.3"
+   
+services:
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_DB=tortk
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=your-pass
+  tortk:
+    build: .
+    command: python3 -m tgtk
+    ports:
+      - "80:80"
+    depends_on: 
+      - db
