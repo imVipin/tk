@@ -1,3 +1,3 @@
-FROM reaitten/tk:latest
+FROM imvipin/tk:latest
 WORKDIR /tk
 COPY . .
